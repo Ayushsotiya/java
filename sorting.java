@@ -26,34 +26,33 @@ System.out.println("\n");
 
 // //// bubble sort
 
-// for(int i=0;i<ary.length-1;i++){
-//     for(int j=0;j<ary.length-i-1;j++){
-//       if(ary[j]>ary[j+1]){
-//          t = ary[j];
-//          ary[j] = ary[j+1];
-//          ary[j+1] =t;
-//       }
-//     }
-// }
-// print_ary(ary, ary.length);
-// System.out.println("\n");
+for(int i=0;i<ary.length-1;i++){  for(int j=0;j<ary.length-i-1;j++){
+       if(ary[j]>ary[j+1]){
+          t = ary[j];
+         ary[j] = ary[j+1];
+         ary[j+1] =t;
+      }
+     }
+ }
+ print_ary(ary, ary.length);
+ System.out.println("\n");
 
 
 // // insertion sort
-//     for(int i=1;i<ary.length;i++){
-//      t = ary[i];
-//      int j=i-1;
-//       while(j>=0){
-//         if(ary[j]>t){
-//           ary[j+1] = ary[j];
-//           }
-//           else{
-//             break;
-//           }
-//           j--;
-//         }
-//         ary[j+1] = t;
-//       }
-//     print_ary(ary, ary.length);
-     }
+    for(int i=1;i<ary.length;i++){
+    t = ary[i];
+      int j=i-1;
+       while(j>=0){
+        if(ary[j]>t){
+           ary[j+1] = ary[j];
+           }
+          else{
+             break;
+           }
+           j--;
+         }
+         ary[j+1] = t;
+       }
+     print_ary(ary, ary.length);
+    }
 } 
