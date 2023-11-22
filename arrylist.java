@@ -4,7 +4,7 @@ import java.util.Collections;
 public class arrylist{
   public static void main(String args[]){
 
-    ArrayList<Integer>list = new ArrayList<Integer>();
+    ArrayList<Integer> list = new ArrayList<Integer>();
    
     //add elements.
     list.add(0);
@@ -36,13 +36,10 @@ public class arrylist{
     for (int i = 0; i < list.size(); i++) {
         System.out.print(list.get(i)+" ");
     }
-   
     System.out.println();
 
     // sort
     Collections.sort(list);
     System.out.println(list);
-
   }
-
 }
