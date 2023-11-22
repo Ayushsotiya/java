@@ -1,0 +1,11 @@
+for(int i=0;i<n;i++)now in this n means kitni vaar chalna chahiye 
+(i=0;i<) es bich kitne no arhe hai utni vaar chalega
+
+
+Actually mai bhot simple hai dont make it difficult , (n) where you need to write how many times do you need to run the loop
+then (i) is the no. from where you need to start the count (how many no are there means this much times loop is running)
+
+Trick - so if we start from the zero dont count the zero first count 1 to whereit is going and then add zero's no. 
+ 
+
+ek chij or jis bhi no ka dekhna hai index yha kuch bhi dekho vo kon se no pai arha hai index uska ek kaam he hoga bass

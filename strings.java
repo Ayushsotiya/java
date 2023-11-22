@@ -32,14 +32,15 @@ public class strings {
             System.out.println("not equal and s1 is greater");
         } else {
             System.out.println("not equal and s1 is smaller");
-        }
-        String  a = "tony stark";
+        }    
 
+
+        String  a = "tony";
         // how to print substringed string.
-        String name1 = a.substring(1, a.length());// exclude second value passed into it
-        System.out.println(name1);// and output is yush
+        String name1 = a.substring(1, a.length());// exclude second value passed into it.
+        System.out.println(name1+" This is name one");// and output is ony.
         // or, we can directly print it.
-        System.out.println(name.substring(1, name.length()));// it exclude second char pass into it.and output is yush
+        System.out.println(name.substring(1, name.length()));// it exclude second char pass into it.and output is ony.
 
         
         // Strings are immutable.

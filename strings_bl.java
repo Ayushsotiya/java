@@ -36,7 +36,7 @@ public class strings_bl {
 
 
         // how to delete in string
-        name1.delete(2, 3);// it exclude 3
+        name1.delete(2, 3);// it exclude second no passed into it (here its 3 , 3 is excluded)
         System.out.println(name1);
 
     }

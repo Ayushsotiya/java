@@ -11,7 +11,7 @@
 
 // Start 
 import java.util.*;
-//  class 1
+//  first class 
 class Pen { // this is how you make the class and all classes name start with capital letter
     String color;// base class or superclass or parents class
     String type;
