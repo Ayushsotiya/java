@@ -37,7 +37,12 @@ public class arrylist{
         System.out.print(list.get(i)+" ");
     }
     System.out.println();
-
+    //another way to iterate in array list;
+    for(int val:list){
+      System.out.print(val+ " ");
+    }
+    System.out.println();
+   
     // sort
     Collections.sort(list);
     System.out.println(list);
