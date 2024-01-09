@@ -62,6 +62,5 @@ public class oop {
         p1.printinfo();
         p1.print("ball");
         p1.print("ball", 20);
-
     }
 }

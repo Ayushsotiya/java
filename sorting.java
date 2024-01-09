@@ -55,10 +55,8 @@ public class sorting {
     int ary1[] = { 5, 90, 21, 4, 7 };
     for (int i = 1; i < ary.length; i++) {
       int j = i;
-      while (j > 0) {
-        if (ary1[j - 1] > ary1[j]) {
+      while (j > 0 && ary1[j - 1] > ary1[j]) {
           swap(j - 1, j, ary1);
-        }
         j--;
       }
     }
