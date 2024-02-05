@@ -7,7 +7,7 @@ public class hashmap {
         HashMap<Integer, Integer> mpp = new HashMap<>();
 
         // Insertion
-        mpp.put(2, 1);
+        mpp.put(2, 1); /*key is main  values is like notes*/ 
         mpp.put(1, 1);
         mpp.put(2, 3);
 
