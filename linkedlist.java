@@ -1,11 +1,11 @@
 // linkedlist structure
 class node {
-int data;
-node next;
-node(int el){
+  int data;
+  node next;
+    node(int el){
     this.data =el;
     this.next = null;
-}
+  }
 }
 public class linkedlist {
     // convet array into LL;
@@ -37,6 +37,7 @@ public class linkedlist {
         System.out.print("count = "+cnt);
         System.out.println("\n");
     }
+    // search in linkedlist
     public static boolean searchLL(node head,int k){
         node mover = head;
         while (mover!=null) {
@@ -47,11 +48,29 @@ public class linkedlist {
         }
         return false;
     }
+    // delete in ll from the start
+    public static node deletNodell(node head){
+       if(head == null) return head;
+        node temp  = head;
+        head  = head.next;
+        return head;
+    }
+    public static node deleteTail(node head){
+         if(head == null || head.next == null) return null;
+         node temp = head;
+         while(temp.next.next!=null){
+           temp =  temp.next;
+         }
+         temp.next = null;
+         return temp;
+    }
     public static void main(String[] args) {
         int arr[] = {3,7,5,0,1};
         node head = creatLL(arr);
         printLL(head);
         lengthofLL(head);
-        System.out.println(searchLL(head, 6));
+        System.out.println(searchLL(head, 6)+"\n");
+        head = deletNodell(head);
+        System.out.println(deleteTail(head).data);
     }
 }
