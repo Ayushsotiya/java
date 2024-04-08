@@ -6,41 +6,33 @@ public class merge {
         ary[j] = t;
     }
 
-     static int  part(int ary[],int l,int h){
-      int pivit = ary[l];
-      int cnt=0;
-      for (int j2=l+1; j2 <=h; j2++) {
-        if(ary[j2]<=pivit){
-            cnt ++;
-        }
-      }
-      int i=l;
-      int j=h;
-      int piviti = cnt+l;   
-      swap(ary, l, piviti);
-      while (i<piviti && j>piviti) {
-        while (ary[i]<pivit) {
+     static int  partition(int ary[],int l,int h){
+      int pivot = ary[l];
+      int i = l;
+      int j = h;
+      while (i<=j) {
+         while (ary[i]<=pivot && i<=h) {
             i++;
-        }
-        while (ary[j]>pivit) {
+         }
+         while (ary[j]>pivot && j>=l+1) {
             j--;
-        }
-        if (i<piviti && j>piviti) {
-            swap(ary, i, j);
-            i++;j++;
-        }
+         }
+         if(i<j){
+         swap(ary, i, j);
+         }
       }
+      swap(ary, l, j);
 
-      return piviti;
+      return j;
      }
 
     static void quicksort(int ary[], int l, int h) {
-        if (l >= h) {
-            return;
+        if (l < h) {
+            int pivot =partition(ary, l, h);
+            quicksort(ary, l, pivot-1);
+            quicksort(ary, pivot+1, h);
         }
-        int piviti =part(ary, l, h);
-        quicksort(ary, l, piviti-1);
-        quicksort(ary, piviti+1, h);
+       
     }
 
     public static void main(String[] args) {
@@ -48,6 +40,6 @@ public class merge {
         quicksort(ary, 0,ary.length - 1);
         for (int i = 0; i < ary.length; i++) {
             System.out.println(ary[i]);
-        }
+        }    
     }
 }

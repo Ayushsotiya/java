@@ -32,35 +32,23 @@ class Pen { // this is how you make the class and all classes name start with ca
             // this.color = color;
             // }
     }
-
     // polymorphism
     public void print(String type) {
         System.out.println(type);
     }
-
     public void print(int price) {
         System.out.println(price);
     }
-
     public void print(String type, int price) {
         System.out.println(type + " " + price);
     }
 }
-
 // class 2
 class pencil extends Pen { // this is inheritance // derived class or subclass or child class
-
 }
-
 // main class
 public class oop {
     public static void main(String args[]) {
-        Pen p1 = new Pen(); // creating class object
-        p1.color = "red";
-        p1.type = "gel"; // this is how you initiate class opject
-        p1.price = 10;
-        p1.printinfo();
-        p1.print("ball");
-        p1.print("ball", 20);
+      
     }
 }
