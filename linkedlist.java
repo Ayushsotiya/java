@@ -4,10 +4,12 @@ import java.util.*;
 class node {
     int data;
     node next;
-    node(int el,node next){
+
+    node(int el, node next) {
         this.data = el;
         this.next = next;
     }
+
     node(int el) {
         this.data = el;
         this.next = null;
@@ -127,79 +129,84 @@ public class linkedlist {
         }
         return head;
     }
+
     // inserting the linkedlist
-    public static node insertAthead(node head,int n){
-        node temp = new node(n,head);
+    public static node insertAthead(node head, int n) {
+        node temp = new node(n, head);
         return temp;
     }
-    public static node insetAttail(node head,int n){
-    if (head == null){
-        node newNode = new node(n);
-        return newNode;
-    }
-    node temp = head;
-    while (temp.next!= null) {
-        temp = temp.next;
-    }
-    node newNode = new node(n);
-    temp.next = newNode;
-    return head;
-    }
-    // insert at the position;
-    public static node  insertAtPlace(node head,int k,int n){
-        if(k==0){
-            return head;
-        }
-        if (head == null){
-            if(k==1){
-            node newNode = new node(k);
+
+    public static node insetAttail(node head, int n) {
+        if (head == null) {
+            node newNode = new node(n);
             return newNode;
         }
-        else return null;
+        node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
         }
-        if(k==1){
+        node newNode = new node(n);
+        temp.next = newNode;
+        return head;
+    }
+
+    // insert at the position;
+    public static node insertAtPlace(node head, int k, int n) {
+        if (k == 0) {
+            return head;
+        }
+        if (head == null) {
+            if (k == 1) {
+                node newNode = new node(k);
+                return newNode;
+            } else
+                return null;
+        }
+        if (k == 1) {
             node newNode = new node(n);
             newNode.next = head;
             return newNode;
         }
         node mover = head;
         int cnt = 0;
-        while(mover.next!=null){
+        while (mover.next != null) {
             cnt++;
-            if(cnt==k-1){
-               node newNode = new node(n,mover.next);
-               mover.next = newNode;
-               break;
+            if (cnt == k - 1) {
+                node newNode = new node(n, mover.next);
+                mover.next = newNode;
+                break;
             }
-            mover= mover.next;
+            mover = mover.next;
         }
         return head;
     }
 
-    // insert at before value 
-    public static node insetBeforeValue(node head,int value,int n){
-        if(head==null){
+    // insert at before value
+    public static node insetBeforeValue(node head, int value, int n) {
+        if (head == null) {
             return head;
         }
-        if(head.data==value){
-            node newNode = new node(n,head);
+        if (head.data == value) {
+            node newNode = new node(n, head);
             return newNode;
         }
         node temp = head;
-        while(temp!=null){
-            if(temp.next.data==value){
-                node newNode = new node(n,temp.next);
+        while (temp.next != null) {
+            if (temp.next.data == value) {
+                node newNode = new node(n, temp.next);
                 temp.next = newNode;
                 break;
             }
             temp = temp.next;
         }
+
         return head;
     }
+
     public static void main(String[] args) {
         int arr[] = { 3, 7, 5, 0, 1 };
         node head = creatLL(arr);
-        head = insetBeforeValue(head,0,2 );
+        head = insetBeforeValue(head, 0, 2);
         printLL(head);
     }
 }
