@@ -49,6 +49,9 @@ class pencil extends Pen { // this is inheritance // derived class or subclass o
 // main class
 public class oop {
     public static void main(String args[]) {
-      
+      Pen gelPen = new Pen();
+      gelPen.type = "gel";
+      System.out.println(gelPen.type);
+     
     }
 }
